@@ -17,10 +17,19 @@ function shuffle(array) {
     return array;
 };
 
-function grabRandomChoices(array){
-
+function grabChoices(choiceList, charRace, charClass){
+    // console.log(choiceList)
+    // console.log(charRace);
+    // console.log(charClass);
+    const customChoices = [
+        choiceList.race[charRace], 
+        choiceList.class[charClass], 
+        choiceList.default.choice3, 
+        choiceList.default.choice4
+    ];
+    return customChoices;
 }
 export default {
     shuffle,
-    grabRandomChoices
+    grabChoices
 };
